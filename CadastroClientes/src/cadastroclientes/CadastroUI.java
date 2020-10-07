@@ -18,6 +18,7 @@ public class CadastroUI extends javax.swing.JFrame {
     public String City;
     public String State;
     public String Address;
+    private String[] args;
 
     public CadastroUI() {
         initComponents();
@@ -83,6 +84,7 @@ public class CadastroUI extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName(""); // NOI18N
         setPreferredSize(new java.awt.Dimension(950, 500));
         setResizable(false);
         getContentPane().setLayout(null);
@@ -93,7 +95,7 @@ public class CadastroUI extends javax.swing.JFrame {
         CadastroLabel.setFont(new java.awt.Font("Unispace", 1, 18)); // NOI18N
         CadastroLabel.setForeground(new java.awt.Color(255, 255, 255));
         CadastroLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cadastroclientes/Reduced_user_icon2.png"))); // NOI18N
-        CadastroLabel.setText("Client Registrantion");
+        CadastroLabel.setText("Costumer Registration");
         jPanel1.add(CadastroLabel);
         CadastroLabel.setBounds(10, 80, 290, 40);
 
@@ -102,7 +104,7 @@ public class CadastroUI extends javax.swing.JFrame {
         NameField.setForeground(new java.awt.Color(255, 255, 255));
         NameField.setBorder(null);
         NameField.setCaretColor(new java.awt.Color(255, 255, 255));
-        NameField.setOpaque(false);
+        NameField.setName(""); // NOI18N
         NameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NameFieldActionPerformed(evt);
@@ -131,7 +133,7 @@ public class CadastroUI extends javax.swing.JFrame {
         CPFField.setForeground(new java.awt.Color(255, 255, 255));
         CPFField.setBorder(null);
         CPFField.setCaretColor(new java.awt.Color(255, 255, 255));
-        CPFField.setOpaque(false);
+        CPFField.setName(""); // NOI18N
         CPFField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CPFFieldActionPerformed(evt);
@@ -160,7 +162,7 @@ public class CadastroUI extends javax.swing.JFrame {
         CityField.setForeground(new java.awt.Color(255, 255, 255));
         CityField.setBorder(null);
         CityField.setCaretColor(new java.awt.Color(255, 255, 255));
-        CityField.setOpaque(false);
+        CityField.setName(""); // NOI18N
         CityField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CityFieldActionPerformed(evt);
@@ -188,7 +190,7 @@ public class CadastroUI extends javax.swing.JFrame {
         StateField.setForeground(new java.awt.Color(255, 255, 255));
         StateField.setBorder(null);
         StateField.setCaretColor(new java.awt.Color(255, 255, 255));
-        StateField.setOpaque(false);
+        StateField.setName(""); // NOI18N
         StateField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 StateFieldActionPerformed(evt);
@@ -217,7 +219,7 @@ public class CadastroUI extends javax.swing.JFrame {
         AddressField.setForeground(new java.awt.Color(255, 255, 255));
         AddressField.setBorder(null);
         AddressField.setCaretColor(new java.awt.Color(255, 255, 255));
-        AddressField.setOpaque(false);
+        AddressField.setName(""); // NOI18N
         AddressField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AddressFieldActionPerformed(evt);
@@ -420,6 +422,7 @@ public class CadastroUI extends javax.swing.JFrame {
         Background.setBounds(0, 0, 950, 500);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void StateFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StateFieldActionPerformed
@@ -562,8 +565,9 @@ public class CadastroUI extends javax.swing.JFrame {
     
     ConfirmButton.setVisible(false);
     CancelButton.setVisible(false);      
-  
         JOptionPane.showMessageDialog(this, "User Cadastration Done!");
+        System.out.println();
+ 
     }//GEN-LAST:event_ConfirmButtonActionPerformed
 
     /**
