@@ -5,8 +5,6 @@ package cadastroclientes;
 public class LoginUI extends javax.swing.JFrame {
     CadastroUI cadastro = new CadastroUI();
     
-    private String user;
-    private String password;
     private String[] args;
     
     public LoginUI() {
@@ -235,8 +233,7 @@ public class LoginUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_CheckBoxActionPerformed
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-   this.user= UserField.getText();
-   this.password = PasswordField.getText();
+
    
    switch(UserField.getText()){
    case "adm":
@@ -244,14 +241,15 @@ public class LoginUI extends javax.swing.JFrame {
             this.setVisible(false);
             CadastroUI.main(args);
             }else{PasswordField.setText("");
-                  PasswordViewField.setText(""); 
-                  System.out.println("erro");
-                  PasswordUserError.setVisible(true);}
-                  break;
+             PasswordViewField.setText(""); 
+             System.out.println("Wrong");
+             PasswordUserError.setVisible(true);}
+             break;
+           
    default: 
       PasswordField.setText("");
       PasswordViewField.setText(""); 
-      System.out.println("erro");
+      System.out.println("wrong");
       PasswordUserError.setVisible(true);
    }
     }//GEN-LAST:event_LoginButtonActionPerformed
