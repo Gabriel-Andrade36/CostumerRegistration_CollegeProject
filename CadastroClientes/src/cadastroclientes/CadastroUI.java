@@ -504,6 +504,11 @@ public final class CadastroUI extends javax.swing.JFrame {
         Addresstxt.setForeground(new java.awt.Color(255, 255, 255));
         Addresstxt.setBorder(null);
         Addresstxt.setCaretColor(new java.awt.Color(255, 255, 255));
+        Addresstxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddresstxtActionPerformed(evt);
+            }
+        });
         getContentPane().add(Addresstxt);
         Addresstxt.setBounds(500, 330, 120, 30);
 
@@ -586,7 +591,7 @@ public final class CadastroUI extends javax.swing.JFrame {
 
     if("".equals(NameField.getText())){
       setNameRequired(true);error++;        
-    }else if(NameField.getText().matches("^[a-zA-ZÁÂÃÀÇÉÊÍÓÔÕÚÜáâãàçéêíóôõúü]*$")){
+    }else if(NameField.getText().matches("^[a-zA-ZÁÂÃÀÇÉÊÍÓÔÕÚÜáâãàçéêíóôõúü ]*$")){
     }else{setNameRestriction(true);error++;}
     
     if("".equals(CPFField.getText())){
@@ -602,7 +607,9 @@ public final class CadastroUI extends javax.swing.JFrame {
     setStateRequired(true);error++;    }
     else{}
     
-    
+   if("".equals(AddressField.getText())){
+       Addresstxt.setVisible(false);
+   }else{Addresstxt.setVisible(true);} 
     
     if(error==0){    
                         
@@ -728,10 +735,14 @@ public final class CadastroUI extends javax.swing.JFrame {
     
     ConfirmButton.setVisible(false);
     CancelButton.setVisible(false);      
-        JOptionPane.showMessageDialog(this, "User Cadastration Done!");
+        JOptionPane.showMessageDialog(this, "Costumer registration done!");
         System.out.println();
  
     }//GEN-LAST:event_ConfirmButtonActionPerformed
+
+    private void AddresstxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddresstxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AddresstxtActionPerformed
 
     /**
      * @param args the command line arguments
